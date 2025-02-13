@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 @Entity
 @Table(name = "saled_car" ,
 uniqueConstraints= {@UniqueConstraint(columnNames= {"gallerist_id","car_id","customer_id"},name="uq_gallerist_car_customer")})
-public class SaledCar extends BaseEntity{//satış işlemi
+public class SaledCar extends BaseEntity{
 	
 	@ManyToOne
 	private Gallerist gallerist;
@@ -24,22 +24,6 @@ public class SaledCar extends BaseEntity{//satış işlemi
 }
 
 
-//
-//@ManyToOne private Gallerist gallerist;
-//
-//Bir satış işlemi bir galerici tarafından yapılır.
-//Ancak bir galerici birçok satış işlemi yapabilir.
-//Bu yüzden Many-to-One (Çoktan bire) bir ilişki var.
-//@ManyToOne private Car car;
-//
-//Bir satış işlemi sadece bir arabayı kapsar.
-//Ancak bir araba farklı zamanlarda farklı kişilere satılabilir.
-//Bu yüzden Many-to-One bir ilişki var.
-//@ManyToOne private Customer customer;
-//
-//Bir müşteri birçok araba satın alabilir.
-//Ancak bir satış işlemi sadece bir müşteriyi kapsar.
-//Bu yüzden Many-to-One bir ilişki var.  
 
 
 
